@@ -1920,6 +1920,10 @@ public class ImGui {
         nPushFont(font.ptr, size);
     }
 
+    public static void pushFont(final ImFont font) {
+        pushFont(font, 0);
+    }
+
     private static native void nPushFont(long font, float size); /*
         ImGui::PushFont(reinterpret_cast<ImFont*>(font), size);
     */
