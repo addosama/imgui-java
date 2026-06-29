@@ -114,6 +114,7 @@ class GenerateLibs extends DefaultTask {
 
         if (forWindows) {
             def win64 = BuildTarget.newDefaultTarget(Os.Windows, Architecture.Bitness._64)
+            win64.compilerPrefix = ""
             requireCpp17(win64)
             addFreeTypeIfEnabled(win64)
             buildTargets += win64
